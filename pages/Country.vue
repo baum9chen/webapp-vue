@@ -83,6 +83,9 @@ export default Vue.extend({
         let arr = this.countries.filter((e) => e['name'] != this.roulette)
         this.countries = arr
       }
+      if (this.countries.length == 0) {
+        alert('終了!')
+      }
     },
     clear_roulette() {
       if (this.timer !== null) {
@@ -91,7 +94,6 @@ export default Vue.extend({
       }
       this.countries = this.countries.concat(this.countries_already)
       this.countries_already = []
-      alert('終了!')
     }
   }
 })
