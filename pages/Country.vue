@@ -2,14 +2,14 @@
   <div class="container">
     <h1 class="title">国名ルーレット</h1>
     <div class="content">
-      <p>{{ roulette }}</p>
-      <p>
-        <img :src="roulette_img" />
-      </p>
       <p>
         <button @click="start_roulette">start</button>
         <button @click="stop_roulette">stop</button>
         <button @click="clear_roulette">clear</button>
+      </p>
+      <p>{{ roulette }}</p>
+      <p>
+        <img :src="roulette_img" />
       </p>
       <hr />
       <p>すでに出た国↓↓↓</p>
