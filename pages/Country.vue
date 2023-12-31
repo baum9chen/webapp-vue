@@ -11,8 +11,13 @@
         <button @click="stop_roulette">stop</button>
         <button @click="clear_roulette">clear</button>
       </p>
-      <p>{{ countries }}</p>
-      <p>{{ countries_already }}</p>
+      <hr />
+      <p>すでに出た国↓↓↓</p>
+      <p class="coutries_already">
+        <ul>
+          <li v-for="item in countries_already" :key="item.name">{{ item.name }}</li>
+        </ul>
+      </p>
     </div>
   </div>
 </template>
