@@ -12,7 +12,7 @@
         <img :src="roulette_img" />
       </p>
       <hr />
-      <p>すでに出た国↓↓↓</p>
+      <p>すでに出た国↓↓↓（あと {{ countries.length }} か国）</p>
       <p class="coutries_already">
         <ul>
           <li v-for="item in countries_already" :key="item.name">{{ item.name }}</li>
