@@ -22,13 +22,17 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data() {
+    const json_data = require('~/static/info.json')
+    var countries = []
+    for (var i = 0; i < json_data.length; ++i) {
+      countries.push({
+        'name': json_data[i]['text'],
+        'image': json_data[i]['img'] != '' ? require('@/assets/' + json_data[i]['img'].split('/').slice(-1)[0]) : ''
+      })
+    }
+
     return {
-      countries: [
-        {'name': 'アイスランド', 'image': require('@/assets/100006432.gif')},
-        {'name': 'アイルランド', 'image': require('@/assets/100047433.gif')},
-        {'name': 'アゼルバイジャン共和国', 'image': require('@/assets/100047425.gif')},
-        {'name': 'アフガニスタン・イスラム共和国', 'image': require('@/assets/000062981.jpg')},
-      ],
+      countries: countries,
       countries_already: []　as { name: string; image: any }[],
       roulette: '',
       roulette_img: '',
