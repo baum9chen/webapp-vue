@@ -37,41 +37,52 @@ export default Vue.extend({
   },
   methods: {
     start_roulette() {
-      if (this.countries.length > 0) {
-        this.timer = window.setInterval(() => {
-          let idx = Math.floor(Math.random() * this.countries.length)
-          // this.countries.length - 1 にすると最後の要素が出なくなる
-          // this.countries.lengthだと最大値が配列のindexから溢れるはずなので保険として
-          if (idx == this.countries.length) {
-            idx -= 1
-          }
-          this.roulette = this.countries[idx]['name']
-          this.roulette_img = this.countries[idx]['image']
-        }, 100)
-      } else {
-        // すべて終了
+      if (this.timer !== null) {
+        console.log('roulette is active.')
+        return
       }
+      if (this.countries.length === 0) {
+        console.log('no countries')
+        return
+      }
+      this.timer = window.setInterval(() => {
+        let idx = Math.floor(Math.random() * this.countries.length)
+        // this.countries.length - 1 にすると最後の要素が出なくなる
+        // this.countries.lengthだと最大値が配列のindexから溢れるはずなので保険として
+        if (idx == this.countries.length) {
+          idx -= 1
+        }
+        this.roulette = this.countries[idx]['name']
+        this.roulette_img = this.countries[idx]['image']
+      }, 100)
     },
     stop_roulette() {
-      if (this.timer) {
-        window.clearInterval(this.timer)
-        this.timer = null
+      if (this.timer === null) {
+        console.log('timer is not active')
+        return 
+      }
+      window.clearInterval(this.timer)
+      this.timer = null
 
-        //現在表示中の国を探す
-        let e = this.countries.find((e) => e['name'] == this.roulette)
-        if (e) {
-          //countries_alreadyに追加
-          this.countries_already.push(e)
+      //現在表示中の国を探す
+      let e = this.countries.find((e) => e['name'] == this.roulette)
+      if (e) {
+        //countries_alreadyに追加
+        this.countries_already.push(e)
 
-          //countriesから除去
-          let arr = this.countries.filter((e) => e['name'] != this.roulette)
-          this.countries = arr
-        }
+        //countriesから除去
+        let arr = this.countries.filter((e) => e['name'] != this.roulette)
+        this.countries = arr
       }
     },
     clear_roulette() {
+      if (this.timer !== null) {
+        console.log('timer is active.')
+        return
+      }
       this.countries = this.countries.concat(this.countries_already)
       this.countries_already = []
+      alert('終了!')
     }
   }
 })
