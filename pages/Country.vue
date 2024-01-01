@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h3 class="title">国名ルーレット</h3>
     <div class="content">
       <p>
         <button class="roulette-btn" @click="start_roulette">Start</button>
@@ -11,9 +10,11 @@
       <p class="content-countryflag">
         <img :src="roulette_img" />
       </p>
-      <hr />
+    </div>
+    <hr />
+    <div class="content">
       <p>すでに出た国↓↓↓（あと {{ countries.length }} か国）</p>
-      <p class="coutries_already">
+      <p class="content-countries_already">
         <ul>
           <li v-for="item in countries_already" :key="item.name">{{ item.name }}</li>
         </ul>
@@ -117,5 +118,8 @@ button.roulette-btn {
 p.content-country {
   font-weight: bold;
   font-size: 1.25em;
+}
+p.content-countries_already ul li {
+  font-size: 0.75em;
 }
 </style>
