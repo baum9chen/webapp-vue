@@ -23,7 +23,7 @@
 {"link":"ukraine/index.html","text":"ウクライナ","img":"/mofaj/files/100022970.gif"},
 {"link":"uzbekistan/index.html","text":"ウズベキスタン共和国","img":"/mofaj/files/100006514.gif"},
 {"link":"uruguay/index.html","text":"ウルグアイ東方共和国","img":"/mofaj/files/100005939.gif"},
-{"link":"uk/index.html","text":"英国（グレートブリテン及び北アイルランド連合王国）","img":"/mofaj/files/100003385.gif"},
+{"link":"uk/index.html","text":"イギリス","img":"/mofaj/files/100003385.gif"},
 {"link":"ecuador/index.html","text":"エクアドル共和国","img":"/mofaj/files/100015083.gif"},
 {"link":"egypt/index.html","text":"エジプト・アラブ共和国","img":"/mofaj/files/100002918.gif"},
 {"link":"estonia/index.html","text":"エストニア共和国","img":"/mofaj/files/100047737.gif"},
@@ -194,6 +194,7 @@
 {"link":"lesotho/index.html","text":"レソト王国","img":"/mofaj/files/100047011.gif"},
 {"link":"lebanon/index.html","text":"レバノン共和国","img":"/mofaj/files/100003177.gif"},
 {"link":"russia/index.html","text":"ロシア連邦","img":"/mofaj/files/100004416.gif"},
+{"link":"","text":"日本","img":""},
 {"link":"/mofaj/area/n_korea/index.html","text":"北朝鮮","img":""},
 {"link":"/mofaj/area/taiwan/index.html","text":"台湾","img":""}
 ]
