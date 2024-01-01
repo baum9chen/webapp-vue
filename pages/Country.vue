@@ -92,8 +92,12 @@ export default Vue.extend({
         console.log('timer is active.')
         return
       }
-      this.countries = this.countries.concat(this.countries_already)
-      this.countries_already = []
+      if (confirm('はじめからやり直します。いいですか？')) {
+        if (confirm('ほんとにいいの？')) {
+          this.countries = this.countries.concat(this.countries_already)
+          this.countries_already = []
+        }
+      }
     }
   }
 })
