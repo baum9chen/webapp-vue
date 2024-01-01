@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <h1 class="title">国名ルーレット</h1>
+    <h3 class="title">国名ルーレット</h3>
     <div class="content">
       <p>
-        <button @click="start_roulette">start</button>
-        <button @click="stop_roulette">stop</button>
-        <button @click="clear_roulette">clear</button>
+        <button class="roulette-btn" @click="start_roulette">Start</button>
+        <button class="roulette-btn" @click="stop_roulette">Stop</button>
+        <button class="roulette-btn" @click="clear_roulette">Clear</button>
       </p>
-      <p>{{ roulette }}</p>
-      <p>
+      <p class="content-country">{{ roulette }}</p>
+      <p class="content-countryflag">
         <img :src="roulette_img" />
       </p>
       <hr />
@@ -102,3 +102,20 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style scoped>
+div.content {
+  font-family: sans-serif;
+}
+button.roulette-btn {
+  width:85px;
+  height: 50px;
+  border-radius: 45%;
+  font-size: 1.25em;
+  margin: 0px 10px;
+}
+p.content-country {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+</style>
