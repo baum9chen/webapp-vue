@@ -118,7 +118,7 @@
 {"link":"nigeria/index.html","text":"ナイジェリア連邦共和国","img":"/mofaj/files/100010190.jpg"},
 {"link":"nauru/index.html","text":"ナウル共和国","img":"/mofaj/files/100030062.gif"},
 {"link":"namibia/index.html","text":"ナミビア共和国","img":"/mofaj/files/100005230.gif"},
-{"link":"/mofaj/area/niue/index.html","text":"ニウエ","img":""},
+{"link":"/mofaj/area/niue/index.html","text":"ニウエ","img":"/mofaj/files/100055051.gif"},
 {"link":"nicaragua/index.html","text":"ニカラグア共和国","img":"/mofaj/files/100045736.gif"},
 {"link":"niger/index.html","text":"ニジェール共和国","img":"/mofaj/files/100015125.gif"},
 {"link":"nz/index.html","text":"ニュージーランド","img":"/mofaj/files/100044139.gif"},
@@ -194,7 +194,7 @@
 {"link":"lesotho/index.html","text":"レソト王国","img":"/mofaj/files/100047011.gif"},
 {"link":"lebanon/index.html","text":"レバノン共和国","img":"/mofaj/files/100003177.gif"},
 {"link":"russia/index.html","text":"ロシア連邦","img":"/mofaj/files/100004416.gif"},
-{"link":"","text":"日本","img":""},
-{"link":"/mofaj/area/n_korea/index.html","text":"北朝鮮","img":""},
-{"link":"/mofaj/area/taiwan/index.html","text":"台湾","img":""}
+{"link":"","text":"日本","img":"no_image.gif"},
+{"link":"/mofaj/area/n_korea/index.html","text":"北朝鮮","img":"no_image.gif"},
+{"link":"/mofaj/area/taiwan/index.html","text":"台湾","img":"no_image.gif"}
 ]
