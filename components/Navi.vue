@@ -2,6 +2,7 @@
   <nav>
     <nuxt-link to="/">TOP</nuxt-link>
     <nuxt-link to="/country">国名ルーレット</nuxt-link>
+    <nuxt-link to="/capital">首都名ルーレット</nuxt-link>
   </nav>
 </template>
 
