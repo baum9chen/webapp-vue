@@ -45,7 +45,7 @@ export default Vue.extend({
 
     return {
       countries: countries,
-      countries_already: []　as { name: string; image: any }[],
+      countries_already: []　as { name: string; hint: any }[],
       roulette: '',
       roulette_hint: '',
       timer: null as number | null,
