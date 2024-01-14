@@ -14,7 +14,7 @@
       <p>すでに出た首都↓↓↓（あと {{ countries.length }} か国）</p>
       <p class="content-countries_already">
         <ul>
-          <li v-for="item in countries_already" :key="item.name">{{ item.name }}</li>
+          <li v-for="item in countries_already" :key="item.name">{{ item.name }}（{{ item.hint }}）</li>
         </ul>
       </p>
     </div>
