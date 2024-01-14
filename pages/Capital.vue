@@ -115,15 +115,15 @@ div.content {
   font-family: sans-serif;
 }
 button.roulette-btn {
-  width:85px;
-  height: 50px;
+  width: 240px;
+  height: 150px;
   border-radius: 45%;
-  font-size: 1.25em;
+  font-size: 4em;
   margin: 0px 10px;
 }
 p.content-country {
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 7em;
 }
 p.content-country-hint {
   font-size: 0.5em;
