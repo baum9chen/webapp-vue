@@ -2,12 +2,12 @@
   <div class="container">
     <div class="content">
       <p>
-        <button class="roulette-btn" @click="start_roulette">Start</button>
-        <button class="roulette-btn" @click="stop_roulette">Stop</button>
-        <button class="roulette-btn" @click="clear_roulette">Clear</button>
+        <button class="roulette-btn roulette-button-start" @click="start_roulette">Start</button>
+        <button class="roulette-btn roulette-button-stop" @click="stop_roulette">Stop</button>
+        <button class="roulette-btn-clear" @click="clear_roulette">Clear</button>
       </p>
       <p class="content-country">{{ roulette }}</p>
-      <p class="content-country-hint">{{ roulette_hint }}</p>
+      <p class="content-country-hint">ヒント：<span class="content-country-hint-text">{{ roulette_hint }}</span></p>
     </div>
     <hr />
     <div class="content">
@@ -118,16 +118,31 @@ button.roulette-btn {
   width: 240px;
   height: 150px;
   border-radius: 45%;
-  font-size: 4em;
+  border-width: 10px;
+  font-size: 3.5em;
   margin: 0px 10px;
+}
+button.roulette-btn-start {
+  border-color: #0000ff;
+}
+button.roulette-btn-stop {
+  border-color: #ff0000;
+}
+button.roulette-btn-clear {
+  width: 120px;
+  height: 75px;
+  border-radius: 45%;
+  font-size: 1.6em;
+  margin: 0px 10px;
+  vertical-align: top;
 }
 p.content-country {
   font-weight: bold;
   font-size: 7em;
 }
-p.content-country-hint {
+p.content-country-hint span.content-country-hint-text {
   font-size: 0.5em;
-  font-color: #aaaaaa;
+  color: #aaaaaa;
 }
 
 p.content-countries_already ul li {
