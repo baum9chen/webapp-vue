@@ -136,6 +136,7 @@ button.roulette-btn-clear {
 p.content-country {
   font-weight: bold;
   font-size: 7em;
+  margin: 50px 0px;
 }
 p.content-country-hint span.content-country-hint-text {
   font-size: 0.5em;
