@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>首都名ルーレット</h1>
     <div class="content">
       <p>
         <button class="roulette-btn roulette-button-start" @click="start_roulette">Start</button>
@@ -114,19 +115,15 @@ export default Vue.extend({
 div.content {
   font-family: sans-serif;
 }
+h1 {
+  font-size: 2em;
+}
 button.roulette-btn {
   width: 240px;
   height: 150px;
   border-radius: 45%;
-  border-width: 10px;
   font-size: 3.5em;
   margin: 0px 10px;
-}
-button.roulette-btn-start {
-  border-color: #0000ff;
-}
-button.roulette-btn-stop {
-  border-color: #ff0000;
 }
 button.roulette-btn-clear {
   width: 120px;
