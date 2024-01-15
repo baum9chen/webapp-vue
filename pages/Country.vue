@@ -108,7 +108,7 @@ export default Vue.extend({
       }
     },
     show_hint() {
-      this.fadingTimer = setInterval(() => {
+      this.fadingTimer = window.setInterval(() => {
         if (this.overlayOpacity > 0) {
           this.overlayOpacity -= 0.05
         } else {
@@ -121,7 +121,7 @@ export default Vue.extend({
     },
     close_hint() {
       if (this.fadingTimer !== null) {
-        clearInterval(this.fadingTimer)
+        window.clearInterval(this.fadingTimer)
         this.fadingTimer = null
       }
       this.overlayOpacity = 1
