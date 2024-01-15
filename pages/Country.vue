@@ -1,10 +1,11 @@
 <template>
   <div class="container">
+    <h1>国名ルーレット</h1>
     <div class="content">
       <p>
-        <button class="roulette-btn" @click="start_roulette">Start</button>
-        <button class="roulette-btn" @click="stop_roulette">Stop</button>
-        <button class="roulette-btn" @click="clear_roulette">Clear</button>
+        <button class="roulette-btn roulette-button-start" @click="start_roulette">Start</button>
+        <button class="roulette-btn roulette-button-stop" @click="stop_roulette">Stop</button>
+        <button class="roulette-btn-clear" @click="clear_roulette">Clear</button>
       </p>
       <p class="content-country">{{ roulette }}</p>
       <div class="content-countryflag-wrapper">
@@ -44,8 +45,8 @@ export default Vue.extend({
     return {
       countries: countries,
       countries_already: []　as { name: string; image: any }[],
-      roulette: '',
-      roulette_img: '',
+      roulette: 'なにがでるかな',
+      roulette_img: require('@/assets/no_image.gif'),
       timer: null as number | null,
       overlayOpacity: 1,
       fadeInterval: null as number | null
@@ -127,16 +128,29 @@ export default Vue.extend({
 div.content {
   font-family: sans-serif;
 }
+h1 {
+  font-size: 2em;
+}
+
 button.roulette-btn {
-  width:85px;
-  height: 50px;
+  width: 240px;
+  height: 150px;
   border-radius: 45%;
-  font-size: 1.25em;
+  font-size: 3.5em;
   margin: 0px 10px;
+}
+button.roulette-btn-clear {
+  width: 120px;
+  height: 75px;
+  border-radius: 45%;
+  font-size: 1.6em;
+  margin: 0px 10px;
+  vertical-align: top;
 }
 p.content-country {
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 7em;
+  margin: 50px 0px;
 }
 p.content-countries_already ul li {
   font-size: 0.75em;
