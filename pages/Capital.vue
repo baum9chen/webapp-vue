@@ -26,14 +26,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  //mounted() {
-  //  let changeWindowSize = 375
-  //  let viewportContent = "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-  //  if (window.innerWidth < changeWindowSize ) {
-  //      viewportContent = "width=375,user-scalable=no,viewport-fit=cover"
-  //  }
-  //  document.querySelector("meta[name='viewport']").setAttribute("content", viewportContent)
-  //},
   data() {
     const json_data = require('~/static/info.json')
     var countries = []
