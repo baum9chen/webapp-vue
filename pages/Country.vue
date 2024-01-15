@@ -7,9 +7,13 @@
         <button class="roulette-btn" @click="clear_roulette">Clear</button>
       </p>
       <p class="content-country">{{ roulette }}</p>
-      <p class="content-countryflag">
-        <img :src="roulette_img" />
-      </p>
+      <div class="content-countryflag-wrapper">
+        <div class="content-countryflag-overlay"
+          :style="{ opacity: overlayOpacity }"
+          @mousedown="show_hint" @touchstart="show_hint"
+          @mouseup="close_hint" @touchend="close_hint">ヒントはここをタップ</div>
+        <img class="content-countryflag-img" :src="roulette_img" />
+      </div>
     </div>
     <hr />
     <div class="content">
@@ -43,6 +47,8 @@ export default Vue.extend({
       roulette: '',
       roulette_img: '',
       timer: null as number | null,
+      overlayOpacity: 1,
+      fadeInterval: null as number | null
     }
   },
   methods: {
@@ -99,6 +105,19 @@ export default Vue.extend({
           this.countries_already = []
         }
       }
+    },
+    show_hint() {
+      this.fadingInterval = setInterval(() => {
+        if (this.overlayOpacity > 0) {
+          this.overlayOpacity -= 0.05
+        } else {
+          clearInterval(this.fadingInterval)
+        }
+      }, 50)
+    },
+    close_hint() {
+      clearInterval(this.fadingInterval)
+      this.overlayOpacity = 1
     }
   }
 })
@@ -122,4 +141,28 @@ p.content-country {
 p.content-countries_already ul li {
   font-size: 0.75em;
 }
+div.content-countryflag {
+  /* 画像の最大値が100px */
+  height: 100px;
+}
+div.content-countryflag-wrapper {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
+div.content-countryflag-overlay { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 1;
+  color: #ffffff;
+  background-color: #999999;
+  border: 1px solid #000000;
+  pointer-event: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
 </style>
