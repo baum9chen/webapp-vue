@@ -112,8 +112,10 @@ export default Vue.extend({
         if (this.overlayOpacity > 0) {
           this.overlayOpacity -= 0.05
         } else {
-          clearInterval(this.fadingTimer)
-          this.fadingTimer = null
+          if (this.fadingTimer !== null) {
+            clearInterval(this.fadingTimer)
+            this.fadingTimer = null
+          }
         }
       }, 50)
     },
