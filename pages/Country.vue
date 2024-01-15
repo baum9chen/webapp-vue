@@ -49,7 +49,7 @@ export default Vue.extend({
       roulette_img: require('@/assets/no_image.gif'),
       timer: null as number | null,
       overlayOpacity: 1,
-      fadeInterval: null as number | null
+      fadingTimer: null as number | null
     }
   },
   methods: {
@@ -108,16 +108,20 @@ export default Vue.extend({
       }
     },
     show_hint() {
-      this.fadingInterval = setInterval(() => {
+      this.fadingTimer = setInterval(() => {
         if (this.overlayOpacity > 0) {
           this.overlayOpacity -= 0.05
         } else {
-          clearInterval(this.fadingInterval)
+          clearInterval(this.fadingTimer)
+          this.fadingTimer = null
         }
       }, 50)
     },
     close_hint() {
-      clearInterval(this.fadingInterval)
+      if (this.fadingTimer !== null) {
+        clearInterval(this.fadingTimer)
+        this.fadingTimer = null
+      }
       this.overlayOpacity = 1
     }
   }
